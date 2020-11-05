@@ -1,11 +1,8 @@
 # Docker image for Python Behavior Driven Development Pipeline
-FROM ubuntu:18.04
+FROM python:3.7-slim
 
-ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    chromium-chromedriver \
+    chromium-driver \
     python3-selenium
 
 WORKDIR /app
